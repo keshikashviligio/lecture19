@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 19</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<form id="user-signup-form" action="/save-user" method="post" novalidate>
+    <div class="form-field">
+        <label for="username">Enter Name</label>
+        <input id="username" type="text" placeholder="User name" required minlength="4">
+        <span class="field-error" id="username-error"></span>
+    </div>
+    <div class="form-field">
+        <label for="email">Enter Email</label>
+        <input id="email" type="email" placeholder="Email" required>
+        <span class="field-error" id="email-error"></span>
+    </div>
+
+    <button type="submit">Save</button>
+</form>
+
+<div id="user-notification" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Modal title</h3>
+            <button class="modal-close">X</button>
+        </div>
+        <div class="modal-body">
+            <p>This is modal body</p>
+        </div>
+    </div>
+</div>
+
+<div id="payment-success" class="modal modal-success">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Success</h3>
+            <button class="modal-close">X</button>
+        </div>
+        <div class="modal-body">
+            <p>Transaction has been successed</p>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
